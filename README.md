@@ -1,6 +1,6 @@
 # RUNNING NODE.JS APPS WITH DOCKER EXAMPLE
 
-This repository is used as support of my video about how to run node.js applications using docker. It includes examples of linked services, envioronment variables, node_modules optiomization and integration with npm 5 using package-lock to optimize dependency installation on image building.
+This repository is used as support of my video(https://www.youtube.com/watch?v=7rqavBlLFbg) about how to run node.js applications using docker. It includes examples of linked services, envioronment variables, node_modules optiomization and integration with npm 5 using package-lock to optimize dependency installation on image building.
 
 
 ## Example APP
