@@ -2,10 +2,9 @@ version: '2'
 services:
   app:
     build: .
+    image: this_is_a_test
     environment:
       NODE_ENV: development
-    ports:
-      - '3000:3000'
     tty: true
     depends_on:
       - mongodb
