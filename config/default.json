@@ -1,0 +1,9 @@
+{
+  "App": {
+    "dbConfig": {
+      "url":"mongodb://mongodb",
+      "dbName": "development",
+      "port": 27017
+    }
+  }
+}

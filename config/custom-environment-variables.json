@@ -1,0 +1,9 @@
+{
+  "App": {
+    "dbConfig": {
+      "url":"DATABASE_URL",
+      "dbName": "DATABASE_NAME",
+      "port": "DATABASE_PORT"
+    }
+  }
+}

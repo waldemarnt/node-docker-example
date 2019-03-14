@@ -1,0 +1,7 @@
+{
+  "App": {
+    "dbConfig": {
+      "dbName": "test"
+    }
+  }
+}
