@@ -1,0 +1,7 @@
+{
+  "App": {
+    "database": {
+      "dbName": "test"
+    }
+  }
+}
