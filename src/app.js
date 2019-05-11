@@ -1,13 +1,14 @@
 const database = require('../config/database');
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./routes');
+const routeSetup = require('./routes');
+const Github = require('./resources/github');
 
 const app = express();
 
-const setupApp = async() => {
+const setupApp = async(githubResource = new Github()) => {
   app.use(bodyParser.json());
-  app.use('/', routes);
+  app.use('/', routeSetup(githubResource));
 
   await database.connect();
 

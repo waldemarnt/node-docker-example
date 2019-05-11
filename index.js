@@ -1,8 +1,8 @@
 const log = require('./src/log');
-const setupApp = require('./src/app');
+const { setupApp } = require('./src/app');
 const config = require('./config/environment');
 
-setupApp(true)
+setupApp()
   .then(app => app.listen(config.port, () => log.info(`app running on port ${config.port}`)))
   .catch(error => {
     log.error(error);

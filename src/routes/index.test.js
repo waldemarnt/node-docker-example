@@ -17,16 +17,16 @@ describe('General test', () => {
 
   describe('route /', () => {
     describe('when a GET request is done to / endpoint', () => {
-      test('should respond with the githubs login', async() => {
+      test('should respond with the followers count', async() => {
         const scope = nock('https://api.github.com')
           .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
           .get('/users/waldemarnt')
           .reply(200, {
-            login: 'waldemarnt'
+            followers: 120
           });
 
         const response = await request.get('/waldemarnt/followers');
-        expect(response.body).toEqual({login:'waldemarnt'});
+        expect(response.body).toEqual({followers:120});
       });
       test('should throw error when the user is not found', async() => {
         const scope = nock('https://api.github.com')
