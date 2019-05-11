@@ -1,9 +1,10 @@
 {
   "App": {
     "database": {
-      "url": "mongodb://mongodb",
+      "url": "mongodb://localhost",
       "port": 27017,
       "dbName": "development"
-    }
+    },
+    "port": 3000
   }
 }

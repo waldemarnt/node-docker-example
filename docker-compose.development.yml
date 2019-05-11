@@ -3,7 +3,7 @@ services:
   app:
     build: .
     environment:
-      NODE_ENV: development
+      NODE_ENV: docker
     command: node_modules/.bin/nodemon --exec npm start
     ports:
       - '3000:3000'
