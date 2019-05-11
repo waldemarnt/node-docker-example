@@ -4,17 +4,10 @@
   "rules": {
     "node/exports-style": ["error", "module.exports"]
   },
+  "env": {
+    "jest": true
+  },
   "globals": {
-    "describe": true,
-    "it": true,
-    "expect": true,
-    "app": true,
-    "beforeEach": true,
-    "request": true,
-    "before": true,
-    "supertest": true,
-    "afterEach": true,
-    "context": true,
-    "setupApp": true
+    "supertest": true
   }
 }
