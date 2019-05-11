@@ -15,3 +15,5 @@ services:
       - /home/app/node_docker/node_modules
   mongodb:
     image: mongo:3.2.5
+    ports:
+      - '27017:27017'
