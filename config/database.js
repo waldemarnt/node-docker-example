@@ -9,7 +9,9 @@ const mongodbUrl = `${dbConfig.get('url')}:${dbConfig.get('port')}/${dbConfig.ge
 const connect = () => mongoose.connect(mongodbUrl, {
     useMongoClient: true
 });
+const close = () => mongoose.connection.close();
 
 module.exports = {
-    connect
+    connect,
+    close
 };

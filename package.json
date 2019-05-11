@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test:acceptance": "NODE_ENV=test mocha --opts test/acceptance/mocha.opts test/acceptance --recursive",
-    "test": "npm run test:acceptance",
+    "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
@@ -20,19 +20,20 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.0",
     "bunyan": "^1.8.12",
-    "chai": "^4.1.2",
     "config": "^3.0.1",
     "express": "^4.15.4",
-    "mocha": "^3.5.3",
     "mongoose": "^4.11.11",
     "request": "^2.81.0",
-    "request-promise": "^4.2.1",
-    "supertest": "^3.0.0"
+    "request-promise": "^4.2.1"
   },
   "devDependencies": {
+    "dtrace-provider": "^0.8.7",
     "eslint": "^4.6.1",
     "eslint-plugin-node": "^5.1.1",
     "eslit": "^5.0.0",
-    "nodemon": "^1.12.0"
+    "jest": "^24.8.0",
+    "nock": "^10.0.6",
+    "nodemon": "^1.12.0",
+    "supertest": "^4.0.2"
   }
 }
