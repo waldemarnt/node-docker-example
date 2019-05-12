@@ -9,13 +9,13 @@ class Github {
     let response;
     try {
       const { data } = await this.request.get(`https://api.github.com/users/${login}`);
-      response =  {followers: data.followers};
-    } catch(error) {
-      const {status, data } = error.response;
-      if(status == 404) {
-        response = {error: data}
-      }else {
-        response = {error: 'Error'}
+      response = { followers: data.followers };
+    } catch (error) {
+      const { status, data } = error.response;
+      if (status == 404) {
+        response = { error: data };
+      } else {
+        response = { error: 'Error' };
       }
     }
     return response;

@@ -6,7 +6,7 @@ const Github = require('./resources/github');
 
 const app = express();
 
-const setupApp = async(githubResource = new Github()) => {
+const setupApp = async (githubResource = new Github()) => {
   app.use(bodyParser.json());
   app.use('/', routeSetup(githubResource));
 
@@ -14,9 +14,9 @@ const setupApp = async(githubResource = new Github()) => {
 
   return app;
 };
-const closeApp = async() => await database.close();
+const closeApp = async () => await database.close();
 
 module.exports = {
   setupApp,
-  closeApp
+  closeApp,
 };

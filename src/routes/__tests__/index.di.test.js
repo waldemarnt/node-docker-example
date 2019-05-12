@@ -10,31 +10,29 @@ describe('Github resource with di', () => {
     request = supertest(app);
   });
 
-  afterAll(async() => await closeApp());
+  afterAll(async () => await closeApp());
 
   describe('route /', () => {
     describe('when a GET request is done to / endpoint', () => {
-
-      test('should respond with the followers count', async() => {
+      test('should respond with the followers count', async () => {
         const fakeRequest = {
-          get: () => Promise.resolve({data: { followers: 120 } })
+          get: () => Promise.resolve({ data: { followers: 120 } }),
         };
         githubResource.request = fakeRequest;
 
         const response = await request.get('/waldemarnt/followers');
-        expect(response.body).toEqual({followers:120});
+        expect(response.body).toEqual({ followers: 120 });
       });
 
-      test('should throw error when the user is not found', async() => {
+      test('should throw error when the user is not found', async () => {
         const fakeRequest = {
-          get: () => Promise.reject({response: {data: 'Not Found', status: 404}})
+          get: () => Promise.reject({ response: { data: 'Not Found', status: 404 } }),
         };
         githubResource.request = fakeRequest;
 
         const response = await request.get('/an_invalid_user/followers');
-          expect(response.body).toEqual({error: 'Not Found'});
+        expect(response.body).toEqual({ error: 'Not Found' });
       });
     });
   });
-
 });

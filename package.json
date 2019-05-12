@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test:acceptance": "NODE_ENV=test mocha --opts test/acceptance/mocha.opts test/acceptance --recursive",
     "test": "jest",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "prettier:check": "prettier -c 'src/**/*.js'",
+    "prettier:fix": "prettier --write 'src/**/*.js'"
   },
   "engines": {
     "node": ">=8.4.0"
@@ -34,6 +35,7 @@
     "jest": "^24.8.0",
     "nock": "^10.0.6",
     "nodemon": "^1.19.0",
+    "prettier": "1.17.0",
     "supertest": "^4.0.2"
   }
 }
