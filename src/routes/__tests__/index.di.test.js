@@ -1,8 +1,8 @@
 const supertest = require('supertest');
-const { setupApp, closeApp } = require('../../src/app.js');
-const Github = require('../resources/github');
+const { setupApp, closeApp } = require('../../../src/app.js');
+const Github = require('../../resources/github');
 
-describe('Github resource without nock', () => {
+describe('Github resource with di', () => {
   let request;
   const githubResource = new Github();
   beforeAll(async function() {
@@ -14,6 +14,7 @@ describe('Github resource without nock', () => {
 
   describe('route /', () => {
     describe('when a GET request is done to / endpoint', () => {
+
       test('should respond with the followers count', async() => {
         const fakeRequest = {
           get: () => Promise.resolve({data: { followers: 120 } })
@@ -23,6 +24,7 @@ describe('Github resource without nock', () => {
         const response = await request.get('/waldemarnt/followers');
         expect(response.body).toEqual({followers:120});
       });
+
       test('should throw error when the user is not found', async() => {
         const fakeRequest = {
           get: () => Promise.reject({response: {data: 'Not Found', status: 404}})
