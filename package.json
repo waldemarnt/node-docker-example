@@ -21,12 +21,12 @@
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "bunyan": "^1.8.12",
-    "config": "^3.1.0",
+    "config": "^3.2.2",
     "elastic-apm-node": "^2.12.1",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "fibonacci": "^1.6.7",
-    "lightship": "^4.1.0",
-    "mongoose": "^4.13.18",
+    "lightship": "^4.3.0",
+    "mongoose": "^4.13.19",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
@@ -37,7 +37,7 @@
     "eslit": "^5.0.0",
     "jest": "^24.8.0",
     "nock": "^10.0.6",
-    "nodemon": "^1.19.0",
+    "nodemon": "^1.19.1",
     "prettier": "1.17.0",
     "supertest": "^4.0.2"
   }
