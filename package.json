@@ -25,7 +25,7 @@
     "elastic-apm-node": "^2.12.1",
     "express": "^4.17.1",
     "fibonacci": "^1.6.7",
-    "lightship": "^4.3.0",
+    "lightship": "^4.3.1",
     "mongoose": "^4.13.19",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
