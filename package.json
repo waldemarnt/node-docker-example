@@ -12,7 +12,7 @@
     "prettier:fix": "prettier --write 'src/**/*.js'"
   },
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=12.2.0"
   },
   "keywords": [],
   "author": "",
