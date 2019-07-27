@@ -1,6 +1,7 @@
 const express = require('express');
 const fb = require('fibonacci');
 const runFibonacci = require('../workers/fibonacciWorker');
+const runFibonacciPool = require('../workers/fibonacciWorkerPool');
 const log = require('../log');
 
 const router = express.Router();
@@ -12,6 +13,11 @@ router.get('/fibonacci', (req, res) => {
 
 router.get('/fibonacciThreaded', async (req, res) => {
   runFibonacci({ iterations: 10000 }).then(result => log.info(result));
+  res.send('processing');
+});
+
+router.get('/fibonacciThreadedPool', async (req, res) => {
+  runFibonacciPool({ iterations: 10000 }).then(result => log.info(result));
   res.send('processing');
 });
 
