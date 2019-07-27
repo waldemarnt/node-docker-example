@@ -1,5 +1,8 @@
 {
   "App": {
+    "cluster": {
+      "enabled": "CLUSTER_ENABLED"
+    },
     "database": {
       "url": "DATABASE_URL",
       "port": "DATABASE_PORT",

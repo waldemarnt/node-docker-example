@@ -1,5 +1,8 @@
 {
   "App": {
+    "cluster": {
+      "enabled": false
+    },
     "database": {
       "url": "mongodb://localhost",
       "port": 27017,
