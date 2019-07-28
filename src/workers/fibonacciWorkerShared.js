@@ -13,8 +13,13 @@ const runFibonacci = workerData => {
 };
 
 if (!isMainThread) {
+  const sharedArray = workerData.arr;
   const result = fb.iterate(workerData.iterations);
-  parentPort.postMessage(result);
+  /**
+   * Adds items to the shared array in a safe way
+   */
+  Atomics.add(sharedArray, workerData.position, result.ms);
+  parentPort.postMessage(sharedArray);
 }
 
 module.exports = runFibonacci;

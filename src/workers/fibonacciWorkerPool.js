@@ -19,8 +19,8 @@ const runFibonacci = workerData => {
 };
 
 if (!isMainThread) {
-  const number = fb.iterate(workerData.iterations);
-  parentPort.postMessage({ number });
+  const result = fb.iterate(workerData.iterations);
+  parentPort.postMessage(result);
 }
 
 module.exports = runFibonacci;
