@@ -1,7 +1,7 @@
 {
   "App": {
     "cluster": {
-      "enabled": true
+      "enabled": false
     },
     "database": {
       "url": "mongodb://mongodb"
