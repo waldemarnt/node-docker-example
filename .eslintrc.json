@@ -1,12 +1,20 @@
 {
   "plugins": ["node"],
   "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "rules": {
     "node/exports-style": ["error", "module.exports"],
-    "no-console": 0
+    "no-console": 0,
+    "node/no-unsupported-features": ["error", {
+      "version": 12,
+      "ignores": []
+    }]
   },
   "env": {
-    "jest": true
+    "jest": true,
+    "es6": true
   },
   "globals": {
     "supertest": true
