@@ -27,7 +27,7 @@ router.get('/fibonacciThreadedShared', async (req, res) => {
    * Uses shared SharedArrayBuffer to share data with the workers
    */
   const sharedUint8Array = new Uint8Array(new SharedArrayBuffer(4));
-  for(let i= 0; i< 4; i++) {
+  for (let i = 0; i < 4; i++) {
     runFibonacciShared({ iterations: 1000, position: i, arr: sharedUint8Array }).then(result => console.log(result));
   }
   res.send('processing');

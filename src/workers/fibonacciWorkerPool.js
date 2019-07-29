@@ -18,6 +18,9 @@ const runFibonacci = workerData => {
   });
 };
 
+/**
+ * If it's not the main thread it's one of the Worker threads
+ */
 if (!isMainThread) {
   const result = fb.iterate(workerData.iterations);
   parentPort.postMessage(result);

@@ -7,6 +7,7 @@ const { createLightship } = require('lightship');
  * https://nodejs.org/api/cluster.html
  */
 const cluster = require('cluster');
+//Get the number of CPUs available
 const CPUs = require('os').cpus().length;
 
 /**
@@ -15,6 +16,10 @@ const CPUs = require('os').cpus().length;
  */
 const ls = createLightship();
 
+/**
+ * If the cluster module is avaible
+ * and the process is the master
+ */
 if(config.get('App.cluster.enabled') && cluster.isMaster) {
   log.info(`Master ${process.pid} is running`);
 
