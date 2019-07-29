@@ -23,6 +23,9 @@ const runFibonacci = workerData => {
  */
 if (!isMainThread) {
   const result = fb.iterate(workerData.iterations);
+  /**
+   * Send a copy the result object back to the main Thread
+   */
   parentPort.postMessage(result);
 }
 
