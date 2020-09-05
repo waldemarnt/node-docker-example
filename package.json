@@ -26,7 +26,7 @@
     "express": "^4.17.1",
     "fibonacci": "^1.6.7",
     "lightship": "^4.3.1",
-    "mongoose": "^4.13.19",
+    "mongoose": "^5.7.5",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "worker-threads-pool": "^2.0.0"
