@@ -35,7 +35,7 @@
     "dtrace-provider": "^0.8.7",
     "eslint": "^4.19.1",
     "eslint-plugin-node": "^5.2.1",
-    "eslit": "^5.0.0",
+    "eslit": "^6.0.0",
     "jest": "^24.8.0",
     "nock": "^10.0.6",
     "nodemon": "^1.19.1",
